@@ -15,6 +15,9 @@
 	<ul>
 		<li v-for="x in itemData">
 			<p>{{x.title}}</p>
+			
+			<!-- <img :src="x.url" alt=""> -->
+
 
 		</li>
 	</ul>
@@ -27,23 +30,25 @@
 	export default{ 
 		data (){
 			return {
-				itemData: [] 
+				itemData: []
 
 			}
 		}, 
 		mounted (){
-			this.$http.post('/api/data')
-			    .then(function (response) {
-			      console.log(response.data.data);
-			      alert('成功了');
-			    })
-			    .catch(function (code) {
-			      alert('失败了');
-			      console.log(code);
-			    })
+			this.$http.get("../../static/one.json").then(function(res){
+				// this.itemData = JSON.parse(res.bodyText).data.feeds;
+				this.itemData = res.body.data.feeds
+				// console.log(res.bodyText);
+				console.log(JSON.parse(res.bodyText));
+				console.log(res.body);
+			})
 		}
 	}
-
+		
+/*
+res.bodyText 取出来的是字符串所以要用JSON.parse();方法 在用链式语句取出对应数据
+res.body 取出来的是对象 就可以直接点属性，取出对应的数据
+*/ 
 
 
 </script>
