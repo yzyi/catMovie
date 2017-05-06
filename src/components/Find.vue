@@ -32,15 +32,15 @@
 			}
 		}, 
 		mounted (){
-			 this.$http.post('/api/mainList')
+			this.$http.post('/api/data')
 			    .then(function (response) {
-			      console.log(response.data);
+			      console.log(response.data.data);
 			      alert('成功了');
 			    })
 			    .catch(function (code) {
 			      alert('失败了');
 			      console.log(code);
-			    });
+			    })
 		}
 	}
 

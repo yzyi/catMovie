@@ -20,7 +20,22 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 // https://github.com/chimurai/http-proxy-middleware
 var proxyTable = config.dev.proxyTable
 
-var app = express()
+var app = express() 
+// 本地json-server服务器搭建代码
+// 引入数据库文件
+var appData = require('../one.json')
+// 引入数据库
+var data = appData.data
+var apiRoutes = express.Router()
+// 使用api的方法来创建连接时候的请求
+apiRoutes.post('/data', function (req, res) {
+  res.json({
+    errno: 0 ,
+    data: data
+  });
+})
+// 调用api
+app.use('/api', apiRoutes)
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
