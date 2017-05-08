@@ -1,18 +1,19 @@
 <template lang="html">
 	<div>
-		<router-view></router-view>
 		<header>
 			<router-link to="/address" id="address">地址</router-link>
 			<router-link to="/film/hot" id="hot">热映</router-link>
 			<router-link to="/film/wait" id="wait">待映</router-link>
 			<router-link to="/film/search" id="search">找片</router-link>
 		</header>
+		<router-view></router-view>
 		<h1>主页</h1>
 	</div>
 </template>
 
 
 <script>
+	import Swiper from "../../static/swiper-3.3.1.min.js"
 	import Vue from "vue"
 	import VueResource from "vue-resource"
 	Vue.use(VueResource)
@@ -28,6 +29,7 @@
 	}
 </script>
 <style lang="css">
+	@import "../../static/swiper-3.3.1.min.css";
 	*{margin:0;padding:0;}
 	header{
 		display:flex;

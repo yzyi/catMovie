@@ -9,6 +9,7 @@ import Hot from "@/components/Hot"
 import Wait from "@/components/Wait"
 import Search from "@/components/Search"
 import Login from "@/components/Login"
+import BuyTicket from "@/components/buyTicket"
 
 Vue.use(Router)
 
@@ -16,9 +17,10 @@ export default new Router({
   routes: 
     [{
         path: "/",
-        component: Film
+        redirect:'/film/hot'
     },{
     	path: "/film",
+        redirect:'/film/hot',
     	component: Film,
         //二级路由
         children: 
@@ -53,5 +55,9 @@ export default new Router({
     {
         path: "/login",
         component: Login
+    },
+    {
+        path: "/buyTicket",
+        component: BuyTicket
     }]
 })
