@@ -17,8 +17,8 @@
 			<p class="items-title">{{x.title}}</p>
 			<div class="items-img">
 				<img src="../assets/tu1.png" alt="" class="items-imgs">
-				<img src="../assets/tu2.png"" alt="" class="items-imgs">
-				<img src="../assets/tu3.png"" alt="" class="items-imgs">
+				<img src="../assets/tu2.png" alt="" class="items-imgs">
+				<img src="../assets/tu3.png" alt="" class="items-imgs">
 			</div>
 			<div class="items_bom">
 				<div class="bom-left">
@@ -57,7 +57,17 @@
 				// console.log(res.bodyText);
 				// console.log(JSON.parse(res.bodyText));
 				// console.log(res.body);
-			})
+			});
+			// var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+			// var doc = document.documentElement;
+			// window.addEventListener(evt, _resize, false);
+			// window.addEventListener("DOMContentLoaded", _resize);
+
+			// function _resize(){
+			// 	var cw = doc.clientWidth;
+			// 	// var cw = doc.clientWidth>720?720:doc.clientWidth;
+			//     doc.style.fontSize = 20 * (cw / 320) + "px";
+			// }
 		}
 	}
 		
@@ -203,20 +213,24 @@ html{
 .bom-right img{
 	margin-right:0.7rem;
 }
+.bom-right img{
+	vertical-align:middle;
 
-
-
-	
-	
-	
-
-	
-	
-
-
-
-
-	
-	
+}
 </style>
+
+
+
+	
+	
+	
+
+	
+	
+
+
+
+
+	
+	
 	
