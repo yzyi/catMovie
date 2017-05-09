@@ -1,6 +1,28 @@
 <template lang="html">
 	<div>
 		<router-link to="/login">输入账号密码</router-link>
+		<div class="login_header">
+			<div class="login_header_left">登录</div>
+			<div class="login_header_right">注册</div>
+		</div>
+		<div class="loginWay">
+			<div>账号密码登录</div>
+			<div>手机号快捷登录</div>
+		</div>
+
+		<div class="account_password">
+			<div class="account_password_left">账号</div>
+			<div class="account_password_right"><input type="text" placeholder="请输入手机号" id="account" style="outline:none"></div>
+		</div>
+		<hr/>
+		<div class="account_password">
+			<div class="account_password_left">密码</div>
+			<div class="account_password_right"><input type="text" placeholder="请输入密码" id="pwd" style="outline:none"></div>
+		</div>
+		<hr/>
+		
+		<div class="btn_login">登录</div>
+		<a href="" class="login_problem">登录遇到问题？</a>
 	</div>
 </template>
 <script>
@@ -9,5 +31,81 @@
 	}
 </script>
 <style lang="css">
-	
+	.login_header{
+		width: 100%;
+		height: 12rem;
+		background: red;
+	}
+	.login_header_left{
+		float: left;
+		font-size: 5rem;
+		color: white;
+		line-height: 12rem;
+		text-indent: 2rem;
+	}
+	.login_header_right{
+		float: right;
+		font-size: 5rem;
+		color: white;
+		line-height: 12rem;
+		margin-right: 2rem;
+	}
+	.loginWay{
+		width: 100%;
+		height: 12rem;
+		border-bottom: 1px solid blue;
+		background: white;
+		display: flex;
+		font-size: 3.8rem;
+	}
+	.loginWay>div{
+		width: 50%;
+		height: 100%;
+		/*background: skyblue;*/
+		line-height: 12rem;
+		text-align: center;
+		margin-bottom: 1px;
+	}
+	.account_password{
+		width: 100%;
+		height: 12rem;
+		background: white;
+		display: flex;
+		margin-bottom: 1px;
+		/*border-bottom: 1px solid;*/
+	}
+
+	.account_password_left{
+		width: 15%;
+		height: 100%;
+		font-size: 3.8rem;
+		line-height: 12rem;
+	}
+	.account_password_right{
+		width: 85%;
+		height: 100%;
+		font-size: 3.8rem;
+	}
+	.account_password_right>input{
+		width: 100%;
+		height: 100%;
+		background: white;
+		font-size: 3.8rem;
+		border: none;
+	}
+	.btn_login{
+		width: 90%;
+		height: 10rem;
+		background: #f8938c;
+		margin: 3rem auto;
+		border-radius: 1.5rem;
+		font-size: 5rem;
+		line-height: 10rem;
+		color: white;
+	}
+	.login_problem{
+		font-size: 3rem;
+		text-decoration: none;
+		color: #999;
+	}
 </style>
