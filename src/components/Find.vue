@@ -3,7 +3,8 @@
 		<router-view></router-view>
 		<div class="head">
 		<div class="head-inner">
-			<img src="../assets/search.png" alt="" class="search">找资讯
+			<input type="text" class="search-r" placeholder="找资讯" ng-click="tab">
+			<!-- <img src="../assets/search.png" alt="" class="search"> -->
 		</div>
 	</div>
 	<div class="f-mune">
@@ -31,12 +32,12 @@
 				</div>
 				
 			</div>
-			
-			<!-- <img :src="x.url" alt=""> -->
 		</li>
 	</ul>
 	</div>
 </template>
+			
+			
 
 
 <script>
@@ -69,7 +70,9 @@
 			//     doc.style.fontSize = 20 * (cw / 320) + "px";
 			// }
 		}
-	}
+
+
+		
 		
 /*
 res.bodyText 取出来的是字符串所以要用JSON.parse();方法 在用链式语句取出对应数据
@@ -77,7 +80,11 @@ res.body 取出来的是对象 就可以直接点属性，取出对应的数据
 */ 
 
 
+}
+
+
 </script>
+
 <style lang="css">
 *{padding:0;margin:0;}
 ul {
@@ -103,9 +110,24 @@ html{
 	border-radius:4.0rem;
 	text-align: center;
 	line-height:6rem;
-	background:url(../assets/search.png) no-repeat; 
+	
 	background:white;
 }
+.search-r{
+	display:inline-block;
+	width:100%;
+	height:6.0rem;
+	border-radius:4.0rem;
+	background:url(../assets/search.png) no-repeat; 
+	background-position:30rem 2rem;
+	vertical-align:top;
+	outline:none;
+	border:0;
+	text-indent:32rem;
+	/*text-align:center;*/
+	font-size:3rem;
+}
+
 .search{
 	margin-right:0.5rem;
 

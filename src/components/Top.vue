@@ -2,7 +2,7 @@
 	<div class="">
 		<div id="top">
 				<div class="topinner">
-					<span class="close">X</span>
+					<span class="close" onclick="history.back()">X</span>
 					今日TOP10
 				</div>
 		</div>

@@ -2,7 +2,7 @@
 	<div class="">
 		<div class="flash">
 			<div class="flashinner">
-				<span class="close">X</span>
+				<span class="close" onclick="history.back()">X</span>
 			影视快讯
 			</div>
 		</div>
@@ -37,12 +37,15 @@
 <script>
 // 《亚瑟王：斗兽争霸》媒体提前观影好评炸裂
 	import Vue from "vue"
+	// import App "./App.vue"
 	import VueResource from "vue-resource"
+	import VueRuter from  "vue-router"
 	Vue.use(VueResource)
+	Vue.use(VueRuter)
 	export default{
 		data (){
 			return {
-				flashitemsData: []
+				flashitemsData: [] 
 				
 			}
 		},
@@ -50,10 +53,15 @@
 			this.$http.get("../../static/flash.json").then(function(res){
 				// console.log(JSON.parse(res.bodyText).data);
 				this.flashitemsData = JSON.parse(res.bodyText).data
-
 			})
+			// go: function(){
+			// 	console.log(dd)
+			// }
 			
 		}
+	
+
+			
 	}
 </script>
 <style lang="css">
