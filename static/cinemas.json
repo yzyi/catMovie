@@ -1,0 +1,685 @@
+{
+  "code": 0,
+  "data": {
+    "cinemas": [
+      {
+        "addr": "朝阳区安慧里三区10号",
+        "cityId": 1,
+        "dis": 9624.613595482486,
+        "distance": "9.6km",
+        "follow": 0,
+        "id": 248,
+        "lat": 39.990856,
+        "lng": 116.40813,
+        "mark": 0,
+        "nm": "北京剧院",
+        "poiId": 82597,
+        "price": 32.9,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "80",
+        "score": 631.25,
+        "sellPrice": "32.9",
+        "shopId": 2080306,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 1
+        }
+      },
+      {
+        "addr": "朝阳区祁家豁子8号健翔大厦家乐福超市B1层",
+        "cityId": 1,
+        "dis": 9699.908546279234,
+        "distance": "9.7km",
+        "follow": 0,
+        "id": 31,
+        "lat": 39.98034,
+        "lng": 116.38147,
+        "mark": 0,
+        "nm": "海航文化天宝国际影城",
+        "poiId": 1098864,
+        "price": 14.9,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等4部影片特惠"
+        },
+        "referencePrice": "80",
+        "score": 636.1446,
+        "sellPrice": "14.9",
+        "shopId": 5189980,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "海淀区中关村大街19号新中关购物中心B1层",
+        "cityId": 1,
+        "dis": 9822.512691363903,
+        "distance": "9.8km",
+        "follow": 0,
+        "id": 152,
+        "lat": 39.978382,
+        "lng": 116.31445,
+        "mark": 0,
+        "nm": "金逸影城(中关村店)",
+        "poiId": 276722,
+        "price": 43.4,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等3部影片特惠"
+        },
+        "referencePrice": "80",
+        "score": 759.322,
+        "sellPrice": "43.4",
+        "shopId": 2032099,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [
+            "60帧厅"
+          ],
+          "sell": 1,
+          "snack": 1
+        }
+      },
+      {
+        "addr": "海淀区中关村大街28号",
+        "cityId": 1,
+        "dis": 9921.650917699513,
+        "distance": "9.9km",
+        "follow": 0,
+        "id": 257,
+        "lat": 39.97669,
+        "lng": 116.31822,
+        "mark": 0,
+        "nm": "海淀剧院",
+        "poiId": 17899,
+        "price": 27.9,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "80",
+        "score": 785.7143,
+        "sellPrice": "27.9",
+        "shopId": 2020426,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "sell": 1,
+          "snack": 0
+        }
+      },
+      {
+        "addr": "海淀区北三环中路中视云投大厦",
+        "cityId": 1,
+        "dis": 10606.620571060099,
+        "distance": "10.6km",
+        "follow": 0,
+        "id": 13003,
+        "lat": 39.969345,
+        "lng": 116.3678,
+        "mark": 0,
+        "nm": "天幕新彩云国际影城",
+        "poiId": 4480546,
+        "price": 14.9,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等4部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 791.17645,
+        "sellPrice": "14.9",
+        "shopId": 17145824,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "海淀区双榆树科学院南路44号（双安商场对面）",
+        "cityId": 1,
+        "dis": 10756.904766337906,
+        "distance": "10.8km",
+        "follow": 0,
+        "id": 155,
+        "lat": 39.967793,
+        "lng": 116.326096,
+        "mark": 0,
+        "nm": "UME国际影城(华星店)",
+        "poiId": 1436373,
+        "price": 34.4,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等3部影片特惠"
+        },
+        "referencePrice": "70",
+        "score": 847.99994,
+        "sellPrice": "34.4",
+        "shopId": 1767676,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [
+            "IMAX厅",
+            "中国巨幕厅"
+          ],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "海淀区北三环18号院大钟寺中坤广场C座3层（地铁13号线大钟寺站出站即到）",
+        "cityId": 1,
+        "dis": 10857.364184953223,
+        "distance": "10.9km",
+        "follow": 0,
+        "id": 1589,
+        "lat": 39.96573,
+        "lng": 116.34114,
+        "mark": 0,
+        "nm": "新华国际影城(大钟寺店)",
+        "poiId": 1524564,
+        "price": 28,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等4部影片特惠"
+        },
+        "referencePrice": "80",
+        "score": 695.1807,
+        "sellPrice": "28",
+        "shopId": 3928675,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "hallType": [
+            "双机3D厅"
+          ],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "海淀区巴沟路2号华联万柳购物中心5层",
+        "cityId": 1,
+        "dis": 10955.539369602653,
+        "distance": "11.0km",
+        "follow": 0,
+        "id": 86,
+        "lat": 39.97296,
+        "lng": 116.29486,
+        "mark": 0,
+        "nm": "橙天嘉禾影城(万柳店)",
+        "poiId": 3303603,
+        "price": 59.5,
+        "promotion": {},
+        "referencePrice": "80",
+        "score": 635.5932,
+        "sellPrice": "59.5",
+        "shopId": 3681952,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [
+            "60帧厅",
+            "4K厅"
+          ],
+          "sell": 1,
+          "snack": 1
+        }
+      },
+      {
+        "addr": "海淀区万柳华府北街2号（万柳华联商城南门对面）",
+        "cityId": 1,
+        "dis": 11102.29343864312,
+        "distance": "11.1km",
+        "follow": 0,
+        "id": 141,
+        "lat": 39.971443,
+        "lng": 116.295105,
+        "mark": 0,
+        "nm": "海淀工人文化宫",
+        "poiId": 38025,
+        "price": 17.9,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "30",
+        "score": 805.2631,
+        "sellPrice": "17.9",
+        "shopId": 2620297,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "朝阳区来广营西路5号院诚盈中心商业街",
+        "cityId": 1,
+        "dis": 11213.177378377033,
+        "distance": "11.2km",
+        "follow": 0,
+        "id": 16421,
+        "lat": 40.021084,
+        "lng": 116.46593,
+        "mark": 0,
+        "nm": "奥兰环球影城(望京店)",
+        "poiId": 106343887,
+        "price": 28.8,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 757.8948,
+        "sellPrice": "28.8",
+        "shopId": 67709984,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 1
+        }
+      },
+      {
+        "addr": "朝阳区七圣中街12号院爱琴海购物中心6层",
+        "cityId": 1,
+        "dis": 12703.061166251131,
+        "distance": "12.7km",
+        "follow": 0,
+        "id": 7619,
+        "lat": 39.97224,
+        "lng": 116.436386,
+        "mark": 0,
+        "nm": "红星太平洋电影城(爱琴海购物中心店)",
+        "poiId": 5948789,
+        "price": 37.9,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 821.9512,
+        "sellPrice": "37.9",
+        "shopId": 14897187,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [
+            "LUXE巨幕厅",
+            "60帧厅"
+          ],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "朝阳区望京阜安西街11号楼合生麒麟新天地2层",
+        "cityId": 1,
+        "dis": 13337.971805609424,
+        "distance": "13.3km",
+        "follow": 0,
+        "id": 7881,
+        "lat": 39.99817,
+        "lng": 116.47787,
+        "mark": 0,
+        "nm": "大地数字影院(望京新天地店)",
+        "poiId": 4036242,
+        "price": 25.9,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 797.1831,
+        "sellPrice": "25.9",
+        "shopId": 15099144,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "海淀区中关村南大街33号国家图书馆内",
+        "cityId": 1,
+        "dis": 13514.206300008931,
+        "distance": "13.5km",
+        "follow": 0,
+        "id": 238,
+        "lat": 39.94304,
+        "lng": 116.32312,
+        "mark": 0,
+        "nm": "国图影院",
+        "poiId": 271442,
+        "price": 33,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2特惠"
+        },
+        "referencePrice": "60",
+        "score": 868.4211,
+        "sellPrice": "33",
+        "shopId": 2447194,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 0
+        }
+      },
+      {
+        "addr": "海淀区温泉镇北部文化中心D座",
+        "cityId": 1,
+        "dis": 13580.92633362136,
+        "distance": "13.6km",
+        "follow": 0,
+        "id": 16285,
+        "lat": 40.042526,
+        "lng": 116.18892,
+        "mark": 0,
+        "nm": "耀莱成龙国际影城(温泉镇店)",
+        "poiId": 116256540,
+        "price": 32.9,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 789.4737,
+        "sellPrice": "32.9",
+        "shopId": 69509274,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [
+            "60帧厅"
+          ],
+          "sell": 1,
+          "snack": 0
+        }
+      },
+      {
+        "addr": "朝阳区望京阜通西大街新荟城购物中心五层",
+        "cityId": 1,
+        "dis": 13609.887533911426,
+        "distance": "13.6km",
+        "follow": 0,
+        "id": 39,
+        "lat": 39.998497,
+        "lng": 116.481926,
+        "mark": 0,
+        "nm": "保利国际影城(望京店)",
+        "poiId": 1107541,
+        "price": 20.8,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "70",
+        "score": 701.5873,
+        "sellPrice": "20.8",
+        "shopId": 4232140,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "东城区东滨河路乙一号雍和航星园内",
+        "cityId": 1,
+        "dis": 14082.65157895857,
+        "distance": "14.1km",
+        "follow": 0,
+        "id": 15280,
+        "lat": 39.95059,
+        "lng": 116.42174,
+        "mark": 0,
+        "nm": "青春光线电影院",
+        "poiId": 99389254,
+        "price": 29.9,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等3部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 928.125,
+        "sellPrice": "29.9",
+        "shopId": 58556187,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "hallType": [
+            "60帧厅",
+            "4K厅"
+          ],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "朝阳区京顺路111号比如世界购物中心1层（近太阳宫北街）",
+        "cityId": 1,
+        "dis": 14438.498442049598,
+        "distance": "14.4km",
+        "follow": 0,
+        "id": 48,
+        "lat": 39.9684,
+        "lng": 116.46204,
+        "mark": 0,
+        "nm": "完美世界影城(17.5比如店)",
+        "poiId": 75603,
+        "price": 24.9,
+        "promotion": {
+          "cardPromotionTag": "开卡购票首单更优惠",
+          "platformActivityTag": "银河护卫队2等2部影片特惠"
+        },
+        "referencePrice": "70",
+        "score": 760,
+        "sellPrice": "24.9",
+        "shopId": 4206977,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "hallType": [
+            "60帧厅"
+          ],
+          "sell": 1,
+          "snack": 1,
+          "vipTag": "折扣卡"
+        }
+      },
+      {
+        "addr": "朝阳区曙光西里甲5号院24号楼凤凰汇三层",
+        "cityId": 1,
+        "dis": 14609.538647620362,
+        "distance": "14.6km",
+        "follow": 0,
+        "id": 2081,
+        "lat": 39.963345,
+        "lng": 116.457664,
+        "mark": 0,
+        "nm": "橙天嘉禾影城(凤凰城店)",
+        "poiId": 1465641,
+        "price": 59.5,
+        "promotion": {},
+        "referencePrice": "80",
+        "score": 584.507,
+        "sellPrice": "59.5",
+        "shopId": 5477181,
+        "tag": {
+          "allowRefund": 0,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "hallType": [
+            "60帧厅",
+            "4K厅"
+          ],
+          "sell": 1,
+          "snack": 1
+        }
+      },
+      {
+        "addr": "海淀区西四环北路金四季购物中心中段三层B003",
+        "cityId": 1,
+        "dis": 14646.015053081057,
+        "distance": "14.6km",
+        "follow": 0,
+        "id": 13054,
+        "lat": 39.94469,
+        "lng": 116.27137,
+        "mark": 0,
+        "nm": "万画影城(四季青店)",
+        "poiId": 41066531,
+        "price": 14.9,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等4部影片特惠"
+        },
+        "referencePrice": "0",
+        "score": 864.28577,
+        "sellPrice": "14.9",
+        "shopId": 23325693,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 1,
+          "sell": 1,
+          "snack": 1
+        }
+      },
+      {
+        "addr": "东城区香河园路1号当代MOMA北区T4座",
+        "cityId": 1,
+        "dis": 14813.59340231019,
+        "distance": "14.8km",
+        "follow": 0,
+        "id": 94,
+        "lat": 39.950455,
+        "lng": 116.43878,
+        "mark": 0,
+        "nm": "百老汇电影中心(万国城店)",
+        "poiId": 1076062,
+        "price": 14.9,
+        "promotion": {
+          "platformActivityTag": "银河护卫队2等3部影片特惠"
+        },
+        "referencePrice": "80",
+        "score": 886.6667,
+        "sellPrice": "14.9",
+        "shopId": 3129577,
+        "tag": {
+          "allowRefund": 1,
+          "buyout": 0,
+          "deal": 0,
+          "endorse": 0,
+          "sell": 1,
+          "snack": 0
+        }
+      }
+
+    ],
+    "ct_pois": [
+      {
+        "ct_poi": "936879945111165696_a248_c0",
+        "poiid": 82597
+      },
+      {
+        "ct_poi": "936879945111165696_a31_c1",
+        "poiid": 1098864
+      },
+      {
+        "ct_poi": "936879945111165696_a152_c2",
+        "poiid": 276722
+      },
+      {
+        "ct_poi": "936879945111165696_a257_c3",
+        "poiid": 17899
+      },
+      {
+        "ct_poi": "936879945111165696_a13003_c4",
+        "poiid": 4480546
+      },
+      {
+        "ct_poi": "936879945111165696_a155_c5",
+        "poiid": 1436373
+      },
+      {
+        "ct_poi": "936879945111165696_a1589_c6",
+        "poiid": 1524564
+      },
+      {
+        "ct_poi": "936879945111165696_a86_c7",
+        "poiid": 3303603
+      },
+      {
+        "ct_poi": "936879945111165696_a141_c8",
+        "poiid": 38025
+      },
+      {
+        "ct_poi": "936879945111165696_a16421_c9",
+        "poiid": 106343887
+      }
+    ],
+    "paging": {
+      "hasMore": true,
+      "limit": 10,
+      "offset": 20,
+      "total": 196
+    }
+  },
+  "success": true
+}

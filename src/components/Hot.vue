@@ -27,7 +27,7 @@
 						<h4><span>观众</span> {{i.sc}}</h4>
 						<p>{{i.scm}}</p>
 						<p>{{i.showInfo}}</p>
-						<router-link to="/buyTicket" class="buy">购买</router-link>
+						<router-link to="/Cinema" class="buy">购买</router-link>
 					</li>
 				</ul>
 				<p class="hot-headLine" v-for="x in i.newsHeadlines">
@@ -163,12 +163,6 @@
 		flex-direction: column;
 		color: #7e7e7e;
 	}
-	.hot-info p{
-		text-overflow: ellipsis;
-		overflow:hidden;
-		white-space:nowrap;
-		width: 70%;
-	}
 	.hot-info h4{
 		color:#ebc45b;
 	}
@@ -209,5 +203,6 @@
 	}
 	.hot-headLine a{
 		color: #7e7e7e;
+		font-size: 1rem;
 	}
 </style>

@@ -49,7 +49,7 @@
 						<h4>{{i.wish}}<span>人想看</span></h4>
 						<p>{{i.name}}</p>
 						<p>{{i.originName}}</p>
-						<router-link to="/buy" class="wait-presell">预售</router-link>
+						<router-link to="/Cinema" class="wait-presell">预售</router-link>
 					</li>
 				</ul>
 			</div>
@@ -232,7 +232,7 @@
 		text-overflow: ellipsis;
 		overflow:hidden;
 		white-space:nowrap;
-		width: 70%;
+		width: 90%;
 	}
 	.wait-info h4{
 		color:#ebc45b;

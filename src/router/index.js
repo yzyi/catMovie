@@ -9,7 +9,8 @@ import Hot from "@/components/Hot"
 import Wait from "@/components/Wait"
 import Search from "@/components/Search"
 import Login from "@/components/Login"
-import BuyTicket from "@/components/buyTicket"
+import BuyTicket from "@/components/buyTicket" 
+import SelectCinema from "@/components/SelectCinema"
 
 Vue.use(Router)
 
@@ -57,7 +58,12 @@ export default new Router({
         component: Login
     },
     {
+        path: "/SelectCinema",
+        component: SelectCinema
+    },
+    {
         path: "/buyTicket",
         component: BuyTicket
     }]
 })
+

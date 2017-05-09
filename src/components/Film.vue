@@ -7,7 +7,6 @@
 			<router-link to="/film/search" id="search">找片</router-link>
 		</header>
 		<router-view></router-view>
-		<h1>主页</h1>
 	</div>
 </template>
 
