@@ -11,6 +11,7 @@ import Search from "@/components/Search"
 import Login from "@/components/Login"
 import BuyTicket from "@/components/buyTicket" 
 import SelectCinema from "@/components/SelectCinema"
+import ok from "@/components/ok"
 
 Vue.use(Router)
 
@@ -64,6 +65,10 @@ export default new Router({
     {
         path: "/buyTicket",
         component: BuyTicket
+    },
+    {
+        path: "/ok",
+        component: ok
     }]
 })
 

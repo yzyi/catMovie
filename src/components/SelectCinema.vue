@@ -43,19 +43,40 @@
 			    </div>
 			</div>
 		</div>
+		<div class="data-today">
+			<p>今天5月9日</p>
+			<ul class="buy-ticket" v-for="i in new Array(7)">
+				<li>
+					<p class="time-start">11:55</p>
+					<p class="time-end">14:11散场</p>
+				</li>
+				<li>
+					<p>原版3D</p>
+					<p class="buy-size">4号厅(4K超<br>清厅)(大)</p>
+				</li>
+				<li>
+					<p class="buy-price">39元</p>
+					<p class="buy-preference">折扣卡首单<br>特惠</p>
+				</li>
+				<li class="buy-buys" @click="clickFun(cinemasData,bannerData)">
+					<router-link to="/buyTicket">购买</router-link> 
+				</li>
+			</ul>
+		</div>
 	</div>
 </template>
 
 <script>
 	import Vue from "vue"
 	import VueResource from "vue-resource"
-
+    import eventTicked from "../buy.js"
 	Vue.use(VueResource)
 	export default{
 		data (){
 			return {
 				bannerData : [],
-				cinemasData :{}
+				cinemasData : {},
+				timesData : []
 			}
 		},
 		mounted (){
@@ -67,7 +88,7 @@
 		           		pagination: '.swiper-pagination',
 				        effect: 'coverflow',
 				        grabCursor: true,
-				        centeredSlides: true,
+				        centSlides: true,
 				        slidesPerView: 'auto',
 				        coverflow: {
 				            rotate: 50,
@@ -82,6 +103,17 @@
 		},
 		created : function(){
 			this.cinemasData = this.$route.query.object;
+			// this.bannerData = this.$route.query.object;
+
+		},
+		methods:{
+			clickFun:function(m,b){
+				eventTicked.$emit("add",m,b);
+				var timeStart = document.getElementsByClassName('time-start').innerHTML,
+					timeEnd = document.getElementsByClassName('time-end').innerHTML;
+			}
+
+			
 		}
 	}
 </script>
@@ -196,5 +228,41 @@
 		position: absolute;
 		top:-1.6rem;
 		left: 47%;
+	}
+	.data-today{
+		width: 100%;
+		font-size: 1.2rem;
+		margin-top: 1rem;
+	}
+	.data-today>p{
+		border-bottom: 1px solid #d0393e;
+		text-align: left;
+		padding-left: 0.6rem;
+		color: #d0393e;
+		height: 2.7rem;
+		line-height: 2.7rem;
+	}
+	.buy-ticket{
+		width: 100%;
+		padding:2rem 0; 
+		text-align: left;
+		border-bottom: 1px solid #efefef;
+		display: flex;
+		justify-content: space-around;
+	}
+	.buy-price{
+		color: #d0393e;
+	}
+	.buy-buys a{
+		display: inline-block;
+		border:1px solid #d0393e;
+		padding:0.2rem 0.5rem;
+		border-radius: 5px;
+		color: #d0393e;
+		vertical-align: bottom;
+	}
+	.time-end, .buy-size, .buy-preference{
+		color: #b7b7b7;
+
 	}
 </style>

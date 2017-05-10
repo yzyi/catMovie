@@ -1,9 +1,15 @@
 <template lang="html">
-	<form onsubmit="" action="">
+	<div>
 		<div id="buy-header">
-			<a href="javascript:history.go(-1)" class="goBack"></a>
-			<span>dfd映</span>
+			<router-link to="/Cinema" class="goBack"></router-link>
+			<span>{{cinemasData.length>0 && cinemasData[0].nm}}</span>
 			<a class="share"><img src="../assets/share.png"></a>
+		</div>
+		<div class="cinemasData">
+			<h3>{{cinemasData.length>0 &&cinemasData[1][0].nm}}</h3>
+			<p>{{cinemasData.length>0 &&cinemasData[1][0].showCinemaNum}}分钟 
+			{{cinemasData.length>0 &&cinemasData.length>0 &&cinemasData[1][0].cat}} 
+			{{cinemasData.length>0 &&cinemasData[1][0].star.split(",")[0]}}</p>
 		</div>
 		<div id="buy-ticket">
 			<ul class="choose-icon">
@@ -47,44 +53,67 @@
 		</div>
 		<div class="recommended-seat">
 			<p>推荐座位</p>
-			<ul>
-				<li>1人</li>
-				<li>2人</li>
-				<li>3人</li>
-				<li>4人</li>
-				<li>5人</li>
-			</ul>
-			<div>
-				一次最多选择5个座位<span>请先选座</span>
+			<div class="peopleNum">
+				<input type="button" value="1人">
+				<input type="button" value="2人">
+				<input type="button" value="3人">
+				<input type="button" value="4人">
+				<input type="button" value="5人">
+			</div>
+			<div class="alert-five">
+				一次最多选择5个座位 <span>请先选座</span>
 			</div>
 		</div>
 		<ul class="selected-seat">
-			<li>
+			<li class="selected">
 				<p>已选座位</p>
-				<p></p>
 			</li>
-			<li>
-				<h3>{{39*2}}元</h3>
-				<p></p>
-				<input type="button" value="确认选座">
+			<li class="buy-submit">
+				<h3 class="totalPrice">{{39*ticketCode}}元</h3>
+				<router-link to="/ok">确认选座</router-link>
 			</li>	
 		</ul>
-	</form>
+	</div>
 </template>
 
 <script>
 	import Vue from "vue"
 	import VueResource from "vue-resource"
+	import eventTicked from "../buy.js"
+
 	Vue.use(VueResource)
 	export default{
 		data (){
 			return {
-				bannerData : []
+				cinemasData : [],
+				isShow : false,
+				ticketCode :0
 			}
 		},
 		mounted (){
 			// 在这里做http数据请求
+			// console.log(eventTicked.todos)
+			this.cinemasData = eventTicked.todos;
+			window.onload = this.checkboxClick();
+			
+		},
+		methods : {
+			checkboxClick : function(){
+				var _this = this;
+				$(".ticketSeat").on("click","input[type='checkbox']",function(){
+					var checkboxs = $("input[type=checkbox]:checked");
+					if(checkboxs.size() > 0){
+						$(".recommended-seat").hide();
+						$(".selected-seat").show();
+					}else{
+						$(".recommended-seat").show();
+						$(".selected-seat").hide();
+					}
+					_this.ticketCode = checkboxs.size();
+				});
+			}
 		}
+
 	}
 </script>
 
@@ -170,7 +199,7 @@
 		width: 100%;
 		height: 2.2rem;
 		line-height: 2.2rem;
-		text-align: center;
+		button- value="人"align: center;
 		color:#fff;
 		font-size: 1.4rem;
 	}
@@ -185,5 +214,87 @@
 	.ticketSeat input[type="checkbox"]{
 		width: 2rem;
 		height: 2rem;
+	}
+	.recommended-seat,.selected-seat{
+		width: 90%;
+		margin:0 auto;
+		margin-bottom: 3rem;
+	}
+	.recommended-seat p{
+		text-align: left;
+		height: 3rem;
+		line-height: 3rem;
+	}
+	.peopleNum{
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 1.2rem;
+		border-bottom: 1px solid #eee;
+	}
+	.peopleNum input{
+		width: 17%;
+		text-align: center;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		border-radius: 0.3rem;
+		outline:none;
+		background: #fff;
+		border: 1px solid #ddd;
+	}
+	.alert-five,.buy-submit{
+		width: 100%;
+		height: 5rem;
+		font-size: 1.2rem;
+		color: #ababab;
+		line-height: 5rem;
+	}
+	.alert-five span{
+		display: inline-block;
+		width: 57%;
+		border-radius: 6px;
+		height: 3.5rem;
+		line-height: 3.5rem;
+		background: #fcdfb3;
+		color:#fff;
+	}
+	.selected{
+		height: 2rem;
+		line-height: 2rem;
+		text-align: left;
+		border-bottom: 1px solid #eee;
+		width: 100%;
+	}
+	.selected-seat{
+		display: none;
+	}
+	.buy-submit{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.buy-submit h3{
+		color: #e12931;
+	}
+	.buy-submit a{
+		width: 40%;
+		text-align: center;
+		height: 3.5rem;
+		line-height: 3.5rem;
+		border-radius:6px;
+		outline:none;
+		background: #fe9903;
+		border: 1px solid #ddd;
+		color: #fff;
+	}
+	.cinemasData{
+		width: 90%;
+		margin:0 auto;
+		height: 6rem;
+		line-height: 3rem;
+		text-align: left;
+		border-bottom: 1px solid #eee;
+	}
+	.cinemasData p{
+		color: #6e6e6e;
 	}
 </style>
