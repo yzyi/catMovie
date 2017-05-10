@@ -1,5 +1,5 @@
 <template lang="html">
-	<div class="bd">
+	<div class="bd2">
 		
 			<div class="setting_top">
 				<div class="setting_top_left" onclick="history.back()">
@@ -53,7 +53,7 @@
 	
 </script>
 <style lang="css">
-	.bd{
+	.bd2{
 		width: 100%;
 		background: #f5f5f5;
 		/*z-index: 999;*/
