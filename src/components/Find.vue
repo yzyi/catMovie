@@ -3,7 +3,7 @@
 		<router-view></router-view>
 		<div class="head">
 		<div class="head-inner">
-			<input type="text" class="search-r" placeholder="找资讯" ng-click="tab">
+			<input type="text" class="search-r" placeholder="找资讯" ng-click="tab" @click="clickEvent()">
 			<!-- <img src="../assets/search.png" alt="" class="search"> -->
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 			<div class="items-img">
 				<img src="../assets/tu1.png" alt="" class="items-imgs">
 				<img src="../assets/tu2.png" alt="" class="items-imgs">
-				<img src="../assets/tu3.png" alt="" class="items-imgs">
+				<img src="../assets/tu3.png" alt="" class="items-imgs"> 
 			</div>
 			<div class="items_bom">
 				<div class="bom-left">
@@ -41,6 +41,7 @@
 
 
 <script>
+
 	import Vue from "vue"
 	import VueResource from "vue-resource" 
 	Vue.use(VueResource)
@@ -50,7 +51,13 @@
 				itemData: []
 
 			}
-		}, 
+		},
+		methods: {
+			clickEvent:function(){
+				// alert(11)
+			}
+
+		} ,
 		mounted (){
 			this.$http.get("../../static/one.json").then(function(res){
 				// this.itemData = JSON.parse(res.bodyText).data.feeds;

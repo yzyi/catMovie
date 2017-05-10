@@ -4,7 +4,7 @@
 			<div class="flashinner">
 				<span class="close" onclick="history.back()">X</span>
 			影视快讯
-			</div>
+			</div> 
 		</div>
 		<div class="news">
 				<div class="newinner">
@@ -54,16 +54,14 @@
 				// console.log(JSON.parse(res.bodyText).data);
 				this.flashitemsData = JSON.parse(res.bodyText).data
 			})
-			// go: function(){
-			// 	console.log(dd)
-			// }
-			
 		}
+	}
+</script>
+			
+			
 	
 
 			
-	}
-</script>
 <style lang="css">
 *{padding:0;margin:0;}
 html{
