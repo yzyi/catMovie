@@ -1,8 +1,8 @@
 <template lang="html">
-	<div>
+	<div class="Cinema-part" @click="offShadow()">
 		<div v-show="isShow || isSpecial" class="cover">
 		</div>
-		<div v-show="isShow" class="sort">
+		<div v-show="isShow" class="sort" @click="sortData($event)">
 			<div>离我最近</div>
 			<div>价格最低</div>
 			<div>好评优先</div>
@@ -11,7 +11,7 @@
 			<div class="special">
 				特色功能
 			</div>
-			<div class="main">
+			<div class="main" @click="filterFn1($event)">
 				<span>全部</span>
 				<span>可退票</span>
 				<span>可改签</span>
@@ -20,7 +20,7 @@
 			<div class="special">
 				特效厅
 			</div>
-			<div class="main">
+			<div class="main" @click="filterFn2($event)">
 				<span>全部</span>
 				<span>60帧厅</span>
 				<span>IMAX厅</span>
@@ -38,7 +38,7 @@
 			</div>
 			<div class="function-btn">
 				<button class="reset">重置</button>
-				<button class="finish" @click="isSpecial=!isSpecial">完成</button>
+				<button class="finish" @click="finish()">完成</button>
 			</div>
 		</div>
 		<div class="cinema-header">
@@ -50,9 +50,9 @@
 			<div class="film-kind">
 				<ul class="film-kind-ul">
 					<li>区域</li>
-					<li v-on:click="isShow=!isShow">离我最近</li>
+					<li @click="showFn($event)">离我最近</li>
 					<li>品牌</li>
-					<li class="server" @click="isSpecial=!isSpecial">特效/服务</li>
+					<li class="server" @click="_showFn($event)">特效/服务</li>
 				</ul>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 			</div>
 		</div>
 		<div class="cinema-infor">
-			<ul v-for="i in cinemaData">
+			<ul v-for="i in changeCinemaData">
 				<li>
 					<router-link :to="{path:'/SelectCinema',query:{object:i}}">
 						<p class="movieName">{{i.nm}}<span class="sellPrice">{{i.sellPrice}}</span><span class="unit">元起</span></p>
@@ -99,20 +99,24 @@ export default{
 	data(){
 		return{
 			cinemaData:'',
+			changeCinemaData: "",  //遍历对象
 			isShow:false,
 			isSpecial:false,
-			bannerData:''
+			bannerData:'',
+			query: "",  //排序
+			filterDate: {
+				special: "全部",
+				buff: "全部"
+			}  //筛选
 		}
 	},
 	mounted(){
-			this.$http.get('../../static/cinemas.json').then(function (response) {
-	      		this.cinemaData = response.data.data.cinemas;
-	    	}).catch(function (code) {
-		      alert('失败了');
-		      console.log(code);
-		    });
-	   		 // 轮播图数据
-	    	this.$http.get("../../static/hot.json").then(function(res){
+	    this.$http.get("../../static/cinemas.json").then(function(res){
+	    	this.cinemaData = JSON.parse(res.bodyText).data.cinemas
+	    	this.changeCinemaData = this.cinemaData;
+	    })
+	    // 轮播图数据
+	    this.$http.get("../../static/hot.json").then(function(res){
 				this.bannerData = JSON.parse(res.bodyText).data.hot;
 				this.$nextTick(function(){
 					var mySwiper = new Swiper ('.swiper-container', {
@@ -121,6 +125,87 @@ export default{
 					}) 
 				})
 			})
+	},
+	methods: {
+		showFn (e){
+			e.stopPropagation();
+			this.isShow = !this.isShow;
+		},
+		_showFn (e){
+			e.stopPropagation();
+			this.isSpecial = !this.isSpecial;
+		},
+		offShadow (){
+			this.isShow = false;
+			this.isSpecial = false;
+		},
+		sortData (e){
+			// this.isShow = !this.isShow;
+			//如果点击与上次相同则结束函数
+			//e.target.innerText 表示当前点击元素的文本值
+			if(this.query == e.target.innerText){
+				return;
+			}
+			$(e.target).css("color","red").siblings().css("color","#000");
+			this.query = e.target.innerText;
+			$(".film-kind-ul>li").eq(1).text(this.query);
+			if(this.query == "离我最近"){
+				this.changeCinemaData = this.changeCinemaData.sort((a,b)=>{
+					return a["distance"].slice(0,a["distance"].length-2) - b["distance"].slice(0,b["distance"].length-2);
+				})
+			}else if(this.query == "价格最低"){
+				this.changeCinemaData = this.changeCinemaData.sort((a,b)=>{
+					return a["price"] - b["price"];
+				})
+			}else if(this.query == "好评优先"){
+				this.changeCinemaData = this.changeCinemaData.sort((a,b)=>{
+					return b["score"] - a["score"];
+				})
+			}
+			// console.log(this.changeCinemaData);
+			for(var k in this.changeCinemaData){
+				// console.log(this.changeCinemaData[k]["price"]);
+			}
+		},
+		filterFn1 (e){
+			e.stopPropagation();
+			this.filterDate.special = e.target.innerText;
+			$(e.target).addClass("special-active").siblings().removeClass("special-active");
+		},
+		filterFn2 (e){
+			e.stopPropagation();
+			this.filterDate.buff = e.target.innerText;
+			$(e.target).addClass("special-active").siblings().removeClass("special-active");
+		},
+		finish (){
+			this.isSpecial = !this.isSpecial;
+			this.changeCinemaData = this.cinemaData;
+			for(var k in this["filterDate"]){
+				if(k == "special"){
+					this.changeCinemaData = this.changeCinemaData.filter(i=>{
+						if(this["filterDate"].special === "可退票"){
+							return i.tag.allowRefund === 1;
+						}else if(this["filterDate"].special === "可改签"){
+							return i.tag.endorse === 1;
+						}else if(this["filterDate"].special === "会员卡"){
+							return i.tag.vipTag && i.tag.vipTag === "折扣卡";
+						}else if(this["filterDate"].special === "全部"){
+							return true;
+						}
+					})
+				}else if(k == "buff"){
+					this.changeCinemaData = this.changeCinemaData.filter(i=>{
+						if(this["filterDate"].buff === "全部"){
+							return true;
+						}
+						return i.tag.hallType && i.tag.hallType[0] === this["filterDate"].buff;
+					})
+				}
+			}
+			// 自己对比  数据太少  看不明显
+			// console.log(this.cinemaData);
+			// console.log(this.changeCinemaData);
+		}
 	}
 }
 var evt = "onorientationchange" in window ? "orientationchange" : "resize";
@@ -292,14 +377,14 @@ function _resize() {
 		position: fixed;
 		width: 100%;
 		text-align: left;
-		top:3.7rem;
+		top:6.1rem;
 		background-color: white;
-		font-size: 1rem;
+		font-size: 1.1rem;
 		padding: 0.63rem;
 		z-index: 999;
 	}
 	.sort div{
-		height: 1.28rem;
+		height: 2.28rem;
 	}
 	.cover{
 		position: fixed;
@@ -312,7 +397,7 @@ function _resize() {
 	}
 	.special-function{
 		position: fixed;
-		top:3.7rem;
+		top:6.1rem;
 		text-align:left;
 		padding: 0 0.43rem 0.6rem 0.43rem;
 		background-color: white;
@@ -354,4 +439,9 @@ function _resize() {
 		background-color: #d73a2f;
 		color: white;
 	}
+	.main .special-active{
+	background:rgba(255,0,0,.3);
+	color:red;
+	border:1px solid red;
+}
 </style>
