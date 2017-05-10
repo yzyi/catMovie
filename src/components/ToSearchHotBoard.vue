@@ -10,7 +10,7 @@
 		</div>
 		<div class="HotBoard-wrap-list-wrap">
 			<ul class="HotBoard-wrap-list">
-				<li class="HotBoard-wrap-list-item" v-for="(i,index) in boardContentArr" :style="{background:`url(${boardUrl[`part${num}`][`Url${index}`]}) no-repeat 1rem center`}">
+				<li class="HotBoard-wrap-list-item" v-for="(i,index) in boardContentArr" :style="{background:boardUrl && `url(${boardUrl[`part${num}`][`Url${index}`]}) no-repeat 1rem center`}">
 					<div class="HotBoard-wrap-list-item-title">
 						<div class="HotBoard-wrap-list-item-name">
 							{{i.nm}}
