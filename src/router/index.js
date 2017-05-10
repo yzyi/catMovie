@@ -10,6 +10,10 @@ import Wait from "@/components/Wait"
 import Search from "@/components/Search"
 import Login from "@/components/Login"
 import setting from "@/components/setting"
+import ToSearch from "@/components/ToSearch"
+import ToSearchHotBoard from "@/components/ToSearchHotBoard"
+import ToAllPrize from "@/components/ToAllPrize"
+import FilmSort from "@/components/FilmSortPage"
 
 Vue.use(Router)
 
@@ -17,7 +21,7 @@ export default new Router({
   routes: 
     [{
         path: "/",
-        component: Film
+        redirect: "/film"
     },{
     	path: "/film",
     	component: Film,
@@ -57,5 +61,20 @@ export default new Router({
     },{
         path : "/setting",
         component: setting
+    },
+    {   path: "/toSearch",
+        component: ToSearch
+    },
+    {
+        path: "/boardId",
+        component: ToSearchHotBoard
+    },
+    {
+        path: "/allPrize",
+        component: ToAllPrize
+    },
+    {
+        path: "/filmSort",
+        component: FilmSort
     }]
 })

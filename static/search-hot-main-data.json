@@ -1,0 +1,48 @@
+{
+"data": [
+{
+"boardId": 7,
+"boardName": "热映口碑",
+"movieId": 588362,
+"movieImgs": [
+"http://p0.meituan.net/w.h/movie/aeb864fa21d578d845b9cefc056e40cb2874891.jpg",
+"http://p1.meituan.net/w.h/movie/af297f59e363ce96290dfea22f6fea0c153020.jpg"
+],
+"movieName": "摔跤吧！爸爸",
+"url": "http://pimg1.126.net/movie/product/movie/149369558940610612_320_426_webp.jpg"
+},
+{
+"boardId": 6,
+"boardName": "最受期待",
+"movieId": 248645,
+"movieImgs": [
+"http://p1.meituan.net/w.h/movie/5db7a4568aea98571731ddda52c8248a374217.jpg",
+"http://p0.meituan.net/w.h/movie/ee5e691b425292f455c3eac5c628cfc7904509.png"
+],
+"movieName": "变形金刚5：最后的骑士",
+"url": "http://pimg1.126.net/movie/product/movie/1363322491709498063_148_197.jpg"
+},
+{
+"boardId": 9,
+"boardName": "海外电影",
+"movieId": 248700,
+"movieImgs": [
+"http://p1.meituan.net/w.h/movie/af297f59e363ce96290dfea22f6fea0c153020.jpg",
+"http://p0.meituan.net/w.h/movie/2a67d64356f8c81ec76e603c1ae2eee513798.jpg"
+],
+"movieName": "速度与激情8",
+"url": "http://pimg1.126.net/movie/product/movie/149196481528110726_320_426_webp.jpg"
+},
+{
+"boardId": 4,
+"boardName": "TOP100",
+"movieId": 1203,
+"movieImgs": [
+"http://p1.meituan.net/w.h/movie/20803f59291c47e1e116c11963ce019e68711.jpg",
+"http://p0.meituan.net/w.h/movie/__40191813__4767047.jpg"
+],
+"movieName": "霸王别姬",
+"url": "http://pimg1.126.net/movie/product/movie/149369402422310564_320_426_webp.jpg"
+}
+]
+}

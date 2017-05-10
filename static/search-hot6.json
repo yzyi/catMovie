@@ -1,0 +1,138 @@
+{
+"data": {
+"boardtype": 6,
+"content": "《猫眼想看月度榜》——将昨日国内待映的影片，按照之前30天的想看数增量从高到低排列，取前50名，每天上午10点更新，相关数据来源于“猫眼电影库”。",
+"created": "2017-05-07",
+"id": 6,
+"movies": [
+{
+"dir": "迈克尔·贝",
+"globalReleased": false,
+"id": 248645,
+"img": "http://p1.meituan.net/w.h/movie/5db7a4568aea98571731ddda52c8248a374217.jpg",
+"monthWish": 97121,
+"nm": "变形金刚5：最后的骑士",
+"pubDesc": "2017-06大陆上映",
+"rt": "2017-06",
+"star": "马克·沃尔伯格,彼特·库伦,伊莎贝拉·莫奈",
+"wish": 165202
+},
+{
+"dir": "乔阿吉姆·罗恩尼,艾斯彭·山德伯格",
+"globalReleased": false,
+"id": 246012,
+"img": "http://p0.meituan.net/w.h/movie/ee5e691b425292f455c3eac5c628cfc7904509.png",
+"monthWish": 78968,
+"nm": "加勒比海盗5：死无对证",
+"pubDesc": "2017-05-26大陆上映",
+"rt": "2017-05-26",
+"star": "约翰尼·德普,奥兰多·布鲁姆,杰弗里·拉什",
+"wish": 397117
+},
+{
+"dir": "赵小丁,安东尼.拉默里纳拉",
+"globalReleased": false,
+"id": 246896,
+"img": "http://p1.meituan.net/w.h/movie/fb99542d5f2ebe0a3e75ddf5b95d42e4578935.jpg",
+"monthWish": 39368,
+"nm": "三生三世十里桃花",
+"pubDesc": "2017-07-21大陆上映",
+"rt": "2017-07-21",
+"star": "刘亦菲,杨洋,彭子苏",
+"wish": 328637
+},
+{
+"dir": "派蒂·杰金斯",
+"globalReleased": false,
+"id": 247731,
+"img": "http://p0.meituan.net/w.h/movie/535c9667b037a2dbc0c01557e4341448126176.jpg",
+"monthWish": 32371,
+"nm": "神奇女侠",
+"pubDesc": "2017-06大陆上映",
+"rt": "2017-06",
+"star": "盖尔·加朵,萨伊德·塔格马奥,丹尼·休斯顿",
+"wish": 53262
+},
+{
+"dir": "雷德利·斯科特",
+"globalReleased": false,
+"id": 78888,
+"img": "http://p1.meituan.net/w.h/movie/155b13994ae4b6490be84fcc9cc49ecb426179.png",
+"monthWish": 27621,
+"nm": "异形：契约",
+"pubDesc": "2017-05大陆上映",
+"rt": "2017-05",
+"star": "迈克尔·法斯宾德,凯瑟琳·沃特斯顿,德米安·比齐尔",
+"wish": 52911
+},
+{
+"dir": "吴京",
+"globalReleased": false,
+"id": 344264,
+"img": "http://p1.meituan.net/w.h/movie/02aab4e9081652865546d92a318f3c7e1026155.jpg",
+"monthWish": 25441,
+"nm": "战狼2",
+"pubDesc": "2017-07-28大陆上映",
+"rt": "2017-07-28",
+"star": "吴京,弗兰克·格里罗,卢靖姗",
+"wish": 94220
+},
+{
+"dir": "郭子健",
+"globalReleased": false,
+"id": 341375,
+"img": "http://p1.meituan.net/w.h/movie/5eeefa4a8b138f78f998b6b0c2466478449446.jpg",
+"monthWish": 24597,
+"nm": "悟空传",
+"pubDesc": "2017-07-13大陆上映",
+"rt": "2017-07-13",
+"star": "彭于晏,倪妮,欧豪",
+"wish": 110398
+},
+{
+"dir": "迪恩·以色列特",
+"globalReleased": false,
+"id": 338499,
+"img": "http://p1.meituan.net/w.h/movie/dcfb57950d6a904544bf9c7fcc2ed5d7194198.jpg",
+"monthWish": 20914,
+"nm": "超凡战队",
+"pubDesc": "2017-05-12大陆上映",
+"rt": "2017-05-12",
+"star": "戴克·蒙哥马利,娜奥米·斯科特,林路迪",
+"wish": 42325
+},
+{
+"dir": "詹姆斯·卡梅隆",
+"globalReleased": false,
+"id": 344924,
+"img": "http://p1.meituan.net/w.h/movie/eb7bc65f1e6bf203882ea75c56bb961d501520.png",
+"monthWish": 19846,
+"nm": "终结者2：审判日",
+"pubDesc": "2017-05大陆上映",
+"rt": "2017-05",
+"star": "阿诺·施瓦辛格,琳达·汉密尔顿,爱德华·弗朗",
+"wish": 70731
+},
+{
+"dir": "盖·里奇",
+"globalReleased": false,
+"id": 338409,
+"img": "http://p0.meituan.net/w.h/movie/48e48e7e9c74838950529fa0982e0817684444.png",
+"monthWish": 16073,
+"nm": "亚瑟王：斗兽争霸",
+"pubDesc": "2017-05-12大陆上映",
+"rt": "2017-05-12",
+"star": "查理·汉纳姆,艾瑞克·巴纳,阿斯特丽德·伯格斯-弗瑞斯贝",
+"wish": 22603
+}
+],
+"paging": {
+"hasMore": true,
+"limit": 10,
+"offset": 0,
+"total": 50
+},
+"shareHidden": 1,
+"title": "猫眼想看月度榜"
+}
+}

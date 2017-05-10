@@ -1,0 +1,46 @@
+.film-search-sort{
+	width:100%;
+	background:#fff;
+	padding:1rem 0 0;
+}
+.film-search-sort>div{
+	display:flex;
+	display: -webkit-box;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+    margin-bottom:2rem;
+}
+/*webkit兼容*/
+.film-search-sort>div::-webkit-scrollbar {
+    display: none;
+}
+.film-search-sort .film-search-sort-year{
+	margin-bottom:0;
+}
+.film-search-sort-theme{
+	margin-left:1rem;
+	line-height:2rem;
+	color:#666;
+}
+.film-search-sort-item{
+    height: 2rem;
+    margin-left:1rem;
+    padding:0 1.5rem;
+    border:1px solid #efefef;
+    border-radius:2rem;
+    text-align:center;
+    line-height:2rem;
+}
+.film-search-sort-item:hover{
+	background:red;
+	color:#fff;
+	border:1px solid red;
+}
+.film-search-sort-item-active{
+	background:red;
+	color:#fff;
+	border:1px solid red;
+}
