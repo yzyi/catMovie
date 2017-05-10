@@ -27,12 +27,81 @@
 					<div class="inner-left">
 						<p class="main-name">宝宝摆件</p>
 						<p class="mian-price">59元</p>
+						<img src="../assets/bg5.png" alt="">
 					</div>
-					<div class="inner-rigth"></div>
+					<div class="inner-rigths">
+						<div class="right-top">
+							<div class="right-top-left">
+								<p class="p-name">花盆格鲁特</p>
+								<p class="p-price">88元</p>
+							</div>
+							<img src="../assets/bg6.png" alt="" class="p-img">
+						</div>
+						<div class="right-top">
+							<div class="right-top-left">
+								<p class="p-name">花盆格鲁特</p>
+								<p class="p-price">88元</p>
+							</div>
+							<img src="../assets/bg8.png" alt="" class="p-img">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="mainLiist">
+				<p class="main-title">格鲁特</p>
+				<div class="main-btm">
+					<div class="inner-left">
+						<p class="main-name">宝宝摆件</p>
+						<p class="mian-price">59元</p>
+						<img src="../assets/bg5.png" alt="">
+					</div>
+					<div class="inner-rigths">
+						<div class="right-top">
+							<div class="right-top-left">
+								<p class="p-name">花盆格鲁特</p>
+								<p class="p-price">88元</p>
+							</div>
+							<img src="../assets/bg6.png" alt="" class="p-img">
+						</div>
+						<div class="right-top">
+							<div class="right-top-left">
+								<p class="p-name">花盆格鲁特</p>
+								<p class="p-price">88元</p>
+							</div>
+							<img src="../assets/bg8.png" alt="" class="p-img">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="mainLiist">
+				<p class="main-title">格鲁特</p>
+				<div class="main-btm">
+					<div class="inner-left">
+						<p class="main-name">宝宝摆件</p>
+						<p class="mian-price">59元</p>
+						<img src="../assets/bg5.png" alt="">
+					</div>
+					<div class="inner-rigths">
+						<div class="right-top">
+							<div class="right-top-left">
+								<p class="p-name">花盆格鲁特</p>
+								<p class="p-price">88元</p>
+							</div>
+							<img src="../assets/bg6.png" alt="" class="p-img">
+						</div>
+						<div class="right-top">
+							<div class="right-top-left">
+								<p class="p-name">花盆格鲁特</p>
+								<p class="p-price">88元</p>
+							</div>
+							<img src="../assets/bg8.png" alt="" class="p-img">
+						</div>
+					</div>
 				</div>
 			</li>
 		</ul>
 			
+							
 			
 
 					
@@ -166,23 +235,66 @@ height: 38.4rem;
 	background-position:5rem 4rem;
 	line-height:23rem;
 }
+.menuitems:first-of-type{
+	background:url(../assets/bg4.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(2){
+	background:url(../assets/bg9.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(3){
+	background:url(../assets/bg10.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(4){
+	background:url(../assets/bg11.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(5){
+	background:url(../assets/bg12.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(6){
+	background:url(../assets/bg13.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(7){
+	background:url(../assets/bg14.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(8){
+	background:url(../assets/bg15.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(9){
+	background:url(../assets/bg16.png) no-repeat;
+	background-position:5rem 4rem;
+}
+.menuitems:nth-of-type(10){
+	background:url(../assets/bg17.png) no-repeat;
+	background-position:5rem 4rem;
+}
 .main{
 	width: 100%;
 	display:flex;
+	flex-wrap:wrap;
 
 }
 .mainLiist{
 	width: 100%;
 	height: 49.7rem;
-	background:yellow;
+	float:left;
+	border-bottom:2.2rem solid #f4f4f4;
+
+	
 }
 .main-title{
 	width: 100%;
 	height: 7.0rem;
 	text-align:left;
-	background:white;
 	font-size:2.2rem;
-	text-indent:2.0rem;
+	text-indent:2.2rem;
 	line-height:7rem;
 	border-top: 0.1rem solid #ececec;
 }
@@ -190,25 +302,20 @@ height: 38.4rem;
 	display:flex;
 	width: 100%;
 	height: 42.2rem;
-	background:pink;
 	border-top:0.1rem solid #ececec;
 	border-bottom: 0.1rem solid #ececec;
 	text-align:left;
 }
 .inner-left{
 	width: 30.2rem;
-	/*padding-left:2rem;*/
 	height: 100%;
-	background:white;
+	text-indent:2.0rem;
 }
-.inner-right{
-	width:39.5rem;
-	height: 100%;
-	background:blue;
-	border-left: 0.1rem solid #ececec;
-	/*padding-left:2rem;*/
-	text-align:left;
-}	
+.inner-left img{
+	display: inline-block;
+	margin-top:3.8rem;
+	margin-left:2rem;
+}
 .main-name{
 	height: 7.0rem;
 	line-height:7rem;
@@ -217,8 +324,54 @@ height: 38.4rem;
 	text-align:left;
 }
 .main-price{
-
+	font-size:2.0rem;
+	color:#9a9a9a;
 }
+.inner-rigths{
+	width:51.5rem;
+	height: 100%;
+	border-left: 0.1rem solid #ececec;
+	text-align:left;
+}
+.right-top{
+	width: 97%;
+	height: 50%;
+	padding-left:2rem;
+	border-top:0.1rem solid #ebebeb;
+}
+.right-top-left{
+	width: 50%;
+	height: 100%;
+	background-color:white;
+	float:left;
+}	
+.p-name{
+	line-height:7rem;
+	font-size: 2.8rem;
+	font-weight:bold;
+}
+.p-price{
+font-size:2.0rem;
+	color:#9a9a9a;
+}
+.p-img{
+	float:left;
+	width: 50%;
+	height: 100%;
+}
+
+	
+	
+	
+
+	
+
+	
+
+
+	
+	
+
 
 
 
