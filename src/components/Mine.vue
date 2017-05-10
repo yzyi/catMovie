@@ -42,8 +42,8 @@
 			<li v-for="item_data in itemData">{{item_data.list}}<img src="../assets/more.png"></li>
 		</ul>
 
-		<ul>
-			<li v-for="item_data2 in itemData2">{{item_data2.list}}<img src="../assets/more.png"></li>
+		<ul class="setting">
+			<router-link to="/setting"><li v-for="item_data2 in itemData2">{{item_data2.list}}<img src="../assets/more.png"></li></router-link>
 		</ul>
 	</div>
 
@@ -87,11 +87,12 @@
 <style lang="css">
 	html{
 		font-size : 10px;
-		background:#f5f5f5;
+		/*background:#f5f5f5;*/
 	}
 	.mine{
 		width : 100%;
 		height:100%;
+		background: #f5f5f5;
 	}
 	.mine-head{
 		width : 100%;
@@ -178,6 +179,10 @@
 		float: right;
 		margin-right: 3rem;
 		margin-top: 3rem;
+	}
+	.setting>a{
+		text-decoration: none;
+		color: black;
 	}
 	
 	

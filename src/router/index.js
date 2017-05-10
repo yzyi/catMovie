@@ -9,6 +9,7 @@ import Hot from "@/components/Hot"
 import Wait from "@/components/Wait"
 import Search from "@/components/Search"
 import Login from "@/components/Login"
+import setting from "@/components/setting"
 
 Vue.use(Router)
 
@@ -53,5 +54,8 @@ export default new Router({
     {
         path: "/login",
         component: Login
+    },{
+        path : "/setting",
+        component: setting
     }]
 })

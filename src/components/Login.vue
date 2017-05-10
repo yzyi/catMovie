@@ -1,6 +1,6 @@
 <template lang="html">
-	<div>
-		<router-link to="/login">输入账号密码</router-link>
+	<div class="bd">
+		<!-- <router-link to="/login">输入账号密码</router-link> -->
 		<div class="login_header">
 			<div class="login_header_left">登录</div>
 			<div class="login_header_right">注册</div>
@@ -23,6 +23,27 @@
 		
 		<div class="btn_login">登录</div>
 		<a href="" class="login_problem">登录遇到问题？</a>
+		
+		<div class="arrows">
+			<img src="../assets/arrows_1.png">
+		</div>
+		<p class="other_way_p">-其他登录方式-</p>
+
+		<div class="other">
+			<div class="other_way">
+				<img src="../assets/weibo.png">
+				<img src="../assets/weixin.png">
+				<img src="../assets/qq.png">
+				<img src="../assets/baidu.png">
+			</div>
+			<div class="other_way_name">
+				<div>微博</div>
+				<div>微信</div>
+				<div>QQ</div>
+				<div>百度</div>
+			</div>
+		</div>
+		
 	</div>
 </template>
 <script>
@@ -31,6 +52,10 @@
 	}
 </script>
 <style lang="css">
+	.bd{
+		width: 100%;
+		background: white;
+	}
 	.login_header{
 		width: 100%;
 		height: 12rem;
@@ -61,7 +86,6 @@
 	.loginWay>div{
 		width: 50%;
 		height: 100%;
-		/*background: skyblue;*/
 		line-height: 12rem;
 		text-align: center;
 		margin-bottom: 1px;
@@ -72,8 +96,8 @@
 		background: white;
 		display: flex;
 		margin-bottom: 1px;
-		/*border-bottom: 1px solid;*/
 	}
+
 
 	.account_password_left{
 		width: 15%;
@@ -94,7 +118,7 @@
 		border: none;
 	}
 	.btn_login{
-		width: 90%;
+		width: 90%; 
 		height: 10rem;
 		background: #f8938c;
 		margin: 3rem auto;
@@ -107,5 +131,36 @@
 		font-size: 3rem;
 		text-decoration: none;
 		color: #999;
+	}
+
+	
+	.arrows{
+		margin: 0 auto;
+		margin-top: 30rem;
+		height: 11.3rem;
+		width: 100%;
+	}
+	.arrows>img{
+		width: 99%;
+	}
+	.other_way_p{
+		font-size: 3.8rem;
+	}
+
+	.other_way{
+		margin-top: 6rem;
+		width: 100%;
+		display: flex;
+		justify-content:space-around;
+	}
+	.other_way>img{
+		display: block;
+	}
+	.other_way_name{
+		margin-top: 1.5rem;
+		width: 100%;
+		display: flex;
+		justify-content:space-around;
+		font-size: 3.8rem;
 	}
 </style>
