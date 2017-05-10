@@ -117,14 +117,14 @@ export default{
 	    })
 	    // 轮播图数据
 	    this.$http.get("../../static/hot.json").then(function(res){
-				this.bannerData = JSON.parse(res.bodyText).data.hot;
-				this.$nextTick(function(){
-					var mySwiper = new Swiper ('.swiper-container', {
-		           			autoplay: 2000,
-	                		observer: true, //修改swiper自己或子元素时，自动初始化swiper
-					}) 
-				})
+			this.bannerData = JSON.parse(res.bodyText).data.hot;
+			this.$nextTick(function(){
+				var mySwiper = new Swiper ('.swiper-container', {
+	           			autoplay: 2000,
+                		observer: true, //修改swiper自己或子元素时，自动初始化swiper
+				}) 
 			})
+		})
 	},
 	methods: {
 		showFn (e){
@@ -217,6 +217,7 @@ function _resize() {
 	var cw = doc.clientWidth;
 	// var cw = doc.clientWidth>720?720:doc.clientWidth;
     doc.style.fontSize = 10 * (cw / 320) + "px";
+    // doc.style.fontSize = "62.5%";
 }
 
 </script>
@@ -443,5 +444,9 @@ function _resize() {
 	background:rgba(255,0,0,.3);
 	color:red;
 	border:1px solid red;
-}
+	}
+	.Cinema-View{
+		height:10rem;
+		background:red;
+	}
 </style>
