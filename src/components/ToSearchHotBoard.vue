@@ -16,7 +16,7 @@
 							{{i.nm}}
 						</div>
 						<div class="HotBoard-wrap-list-item-score">
-							{{i.sc}}
+							{{i.sc}}分
 						</div>
 					</div>
 					<div class="HotBoard-wrap-list-item-con">
@@ -121,6 +121,8 @@
 		border:1px solid red;
 		border-radius:2px;
 		color:red;
+		background:url(../assets/heart.png) no-repeat 1rem center;
+		background-size:auto 80%;
 	}
 	.HotBoard-wantLook .glyphicon-heart-empty{
 		left:10%;

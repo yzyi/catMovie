@@ -18,7 +18,7 @@
 		</div>
 		<div class="FilmSortPage-content">
 			<ul>
-				<li class="FilmSortPage-item" v-for="(i,index) in sortArr" :style="{background:`url(${urlData[`Url${index+45}`]}) no-repeat 1rem center`}">
+				<li class="FilmSortPage-item" v-for="(i,index) in sortArr" :style="{background:`url(${urlData[`Url${index+41}`]}) no-repeat 1rem center`}">
 					<p class="FilmSortPage-item-cn">{{i.nm}}</p>
 					<p class="FilmSortPage-item-en">{{i.enm}}</p>
 					<p class="FilmSortPage-item-type">{{i.cat}}</p>
@@ -77,7 +77,7 @@
 					});
 				};
 			});
-			//获取图片数据（因为图片地址被锁定，只能造）
+			//获取图片数据
 			this.$http.get("../../static/getUrl2.json").then(res=>{
 				this.urlData = res.body;
 			});
@@ -113,6 +113,7 @@
 		background:red;
 		color:#fff;
 		text-align:center;
+		font-size:1.8rem;
 	}
 	.FilmSortPage-icon{
 		position:absolute;
@@ -126,10 +127,7 @@
 		height: 2rem;
 	    margin-left:1rem;
 	    padding:0 1.5rem;
-		/*background-color:red;
-		border:1px solid red;*/
 		border-radius:2rem;
-		/*color:#fff;*/
 		text-align:center;
     	line-height:2rem;
 	}

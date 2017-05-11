@@ -1,6 +1,5 @@
 <template lang="html">
 	<div>
-		<h1>待映</h1>
 		<section id="wait-showing">
 			<div class="wait-recommend">
 				<p>预告片推荐</p>
@@ -73,22 +72,9 @@
 	}
 </script>
 <style lang="css">
-	li{
-		list-style: none;
-	}
-	h4,i,b,h1,h2,h3,h5,h6{
-		font-weight: normal;
-		font-style: normal;
-	}
-	a{
-		text-decoration:none;
-		font-size: 1.1rem;
-	}
-	html{
-		font-size:1rem;
-	}
 	#wait-showing{
 		width: 100%;
+		padding-bottom: 4rem;
 		font-size: 1rem;
 	}
 	.wait-recommend{
@@ -121,6 +107,9 @@
 	.wait-prevue .reflected-date{
 		width: 29%;
 		height:13rem;
+	}
+	.wait-prevue::-webkit-scrollbar{
+		display:none;
 	}
 	.reflected-date video,.reflected-date img{
 		height: 9rem;

@@ -12,7 +12,7 @@
 				特色功能
 			</div>
 			<div class="main" @click="filterFn1($event)">
-				<span>全部</span>
+				<span class="special-active">全部</span>
 				<span>可退票</span>
 				<span>可改签</span>
 				<span>会员卡</span>
@@ -21,7 +21,7 @@
 				特效厅
 			</div>
 			<div class="main" @click="filterFn2($event)">
-				<span>全部</span>
+				<span class="special-active">全部</span>
 				<span>60帧厅</span>
 				<span>IMAX厅</span>
 				<span>杜比全景声厅</span>
@@ -44,8 +44,8 @@
 		<div class="cinema-header">
 			<header class="cinema">
 				<router-link to="/address" id="address">北京</router-link>
-				<h2>影院</h2>
-				<h2 class="searc"><img src="../assets/search.png"></h2>
+				影院
+				<router-link to="/Search" class="cinema-toSearch"></router-link>
 			</header>
 			<div class="film-kind">
 				<ul class="film-kind-ul">
@@ -87,6 +87,7 @@
 				</li>
 			</ul>
 		</div>
+		<FooterComponent></FooterComponent>
 	</div>
 </template>
 <script>
@@ -94,6 +95,7 @@ import Vue from "vue"
 import VueResource from "vue-resource"
 import Swiper from "../../static/swiper-3.3.1.min.js"
 import eventTicked from "../buy.js"
+import FooterComponent from "./footerComponent"
 Vue.use(VueResource)
 export default{
 	data(){
@@ -162,10 +164,6 @@ export default{
 					return b["score"] - a["score"];
 				})
 			}
-			// console.log(this.changeCinemaData);
-			for(var k in this.changeCinemaData){
-				// console.log(this.changeCinemaData[k]["price"]);
-			}
 		},
 		filterFn1 (e){
 			e.stopPropagation();
@@ -202,22 +200,11 @@ export default{
 					})
 				}
 			}
-			// 自己对比  数据太少  看不明显
-			// console.log(this.cinemaData);
-			// console.log(this.changeCinemaData);
 		}
+	},
+	components: {
+		FooterComponent
 	}
-}
-var evt = "onorientationchange" in window ? "orientationchange" : "resize";
-var doc = document.documentElement;
-window.addEventListener(evt, _resize, false);
-window.addEventListener("DOMContentLoaded", _resize);
-
-function _resize() {
-	var cw = doc.clientWidth;
-	// var cw = doc.clientWidth>720?720:doc.clientWidth;
-    doc.style.fontSize = 10 * (cw / 320) + "px";
-    // doc.style.fontSize = "62.5%";
 }
 
 </script>
@@ -244,12 +231,20 @@ function _resize() {
 	}
 	.cinema{
 		width: 100%;
-		height: 3rem;
-		background: #d23e34;
-		line-height: 3rem;
-		font-size: 1rem;
+		height: 4rem;
+		line-height: 4rem;
+		font-size: 1.6rem;
 		color: white;
-		font-weight: normal;
+		background-color: #d23e34;
+		padding:0 1rem;
+		box-sizing:border-box;
+	}
+	.cinema-toSearch{
+		float:right;
+		width:4rem;
+		height:100%;
+		background:url("../assets/search.png") no-repeat center;
+		background-size:auto 80%;
 	}
 	.film-kind{
 		width: 100%;
@@ -375,17 +370,18 @@ function _resize() {
 		border-radius: 10%;
 	}
 	.sort{
+		/*别在这用padding 会出问题*/
 		position: fixed;
 		width: 100%;
+		line-height:3rem;
 		text-align: left;
-		top:6.1rem;
+		top:7rem;
 		background-color: white;
 		font-size: 1.1rem;
-		padding: 0.63rem;
 		z-index: 999;
 	}
 	.sort div{
-		height: 2.28rem;
+		margin-left: 1rem;
 	}
 	.cover{
 		position: fixed;
@@ -398,7 +394,7 @@ function _resize() {
 	}
 	.special-function{
 		position: fixed;
-		top:6.1rem;
+		top:7rem;
 		text-align:left;
 		padding: 0 0.43rem 0.6rem 0.43rem;
 		background-color: white;
@@ -409,6 +405,9 @@ function _resize() {
 		margin:0.5rem 0 0 0;
 	}
 	.main{
+		display:flex;
+		justify-content:space-around;
+		flex-wrap:wrap;
 		width: 100%;
 		padding-bottom: 0.6rem; 
 		border-bottom: 1px solid #dfdfdf;
@@ -420,7 +419,7 @@ function _resize() {
 		text-align: center;
 		border:1px solid #dfdfdf;
 		border-radius: 5%;
-		padding: 0.2rem 0;
+		padding: .8rem 0;
 		margin-top: 0.4rem;
 	}
 	.function-btn{

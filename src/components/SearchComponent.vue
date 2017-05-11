@@ -22,8 +22,8 @@
 	}
 	.film-title-input{
 		width:100%;
-		height:4rem;
-		padding-top:1rem;
+		height:5rem;
+		padding:1rem 0;
 		background-color:#ef1106;
 		text-align:center;
 	}
@@ -39,7 +39,7 @@
 		display:inline-block;
 		width:14%;
 		height:100%;
-		background:#fff url(../assets/search.png) no-repeat center;
+		background:#fff url(../assets/search1.png) no-repeat center;
 		background-size:auto 60%;
 		border-radius:2rem;
 		vertical-align:top;

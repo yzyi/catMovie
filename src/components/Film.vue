@@ -1,12 +1,5 @@
 <template lang="html">
 	<div>
-		<header>
-			<router-link to="/address" id="address">地址</router-link>
-			<router-link to="/film/hot" id="hot">热映</router-link>
-			<router-link to="/film/wait" id="wait">待映</router-link>
-			<router-link to="/film/search" id="search">找片</router-link>
-		</header>
-		<router-view></router-view>
 		<div class="Film-View">
 			<router-link to="/address" id="address">
 				地址
@@ -50,25 +43,24 @@
 	#address{
 		float:left;
 		position:relative;
-		width:18%;
-		padding-left:1rem;
+		width:15%;
 		color:#fff;
 		text-align:left;
-		font-size:1.8rem;
-		background:url("../assets/more_unfold.png") no-repeat 4rem center;
+		background:url("../assets/more_unfold.png") no-repeat right center;
 		background-size:auto 70%;
+		font-size:1.8rem;
 	}
 	#address:active{
 		background:#a50c04;
 	}
 	.title-contains{
-		width:40%;
+		width:50%;
 		height:100%;
 		margin:0 auto;
 		text-align:center;
-		font-size:0;
 		background:#a50c04;
 		border-radius:.5rem;
+		font-size:1.4rem;
 	}
 	.title-contains>a{
 		vertical-align:top;
@@ -77,7 +69,6 @@
 		height:2.2rem;
 		line-height:2.4rem;
 		display:inline-block;
-		font-size:1.8rem;
 		color:#fff;
 	}
 	.title-contains>a:hover{

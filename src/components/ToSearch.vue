@@ -41,6 +41,7 @@
 		position:relative;
 	}
 	.cancel-toBack{
+		font-size:1.4rem;
 		position:absolute;
 		top:50%;
 		right:2rem;
@@ -61,7 +62,7 @@
 		border-top:1px solid #cfcfcf;
 	}
 	.ToSearch-hot-item{
-		width:20%;
+		width:30%;
 		padding:1rem;
 		margin-top:1rem;
 		background:#efefef;

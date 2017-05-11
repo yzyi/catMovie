@@ -1,6 +1,5 @@
 <template lang="html">
 	<div class="bd">
-		<!-- <router-link to="/login">输入账号密码</router-link> -->
 		<div class="login_header">
 			<div class="login_header_left">登录</div>
 			<div class="login_header_right">注册</div>
@@ -63,14 +62,12 @@
 	}
 	.login_header_left{
 		float: left;
-		font-size: 5rem;
 		color: white;
 		line-height: 12rem;
 		text-indent: 2rem;
 	}
 	.login_header_right{
 		float: right;
-		font-size: 5rem;
 		color: white;
 		line-height: 12rem;
 		margin-right: 2rem;
@@ -81,7 +78,6 @@
 		border-bottom: 1px solid blue;
 		background: white;
 		display: flex;
-		font-size: 3.8rem;
 	}
 	.loginWay>div{
 		width: 50%;
@@ -102,19 +98,16 @@
 	.account_password_left{
 		width: 15%;
 		height: 100%;
-		font-size: 3.8rem;
 		line-height: 12rem;
 	}
 	.account_password_right{
 		width: 85%;
 		height: 100%;
-		font-size: 3.8rem;
 	}
 	.account_password_right>input{
 		width: 100%;
 		height: 100%;
 		background: white;
-		font-size: 3.8rem;
 		border: none;
 	}
 	.btn_login{
@@ -123,12 +116,10 @@
 		background: #f8938c;
 		margin: 3rem auto;
 		border-radius: 1.5rem;
-		font-size: 5rem;
 		line-height: 10rem;
 		color: white;
 	}
 	.login_problem{
-		font-size: 3rem;
 		text-decoration: none;
 		color: #999;
 	}
@@ -143,10 +134,6 @@
 	.arrows>img{
 		width: 99%;
 	}
-	.other_way_p{
-		font-size: 3.8rem;
-	}
-
 	.other_way{
 		margin-top: 6rem;
 		width: 100%;
@@ -161,6 +148,5 @@
 		width: 100%;
 		display: flex;
 		justify-content:space-around;
-		font-size: 3.8rem;
 	}
 </style>

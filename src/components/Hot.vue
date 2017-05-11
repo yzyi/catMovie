@@ -1,8 +1,5 @@
 <template lang="html">
 	<div>
-		<div>
-			<h1>热映</h1>
-		</div>
 		<section id="hotShowing">
 			<div class="hot-swiper">
 				<div class="swiper-container">
@@ -69,33 +66,21 @@
 </script>
 
 <style lang="css">
-	li{
-		list-style: none;
-	}
-	h4,i,b,h1,h2,h3,h5,h6{
-		font-weight: normal;
-		font-style: normal;
-	}
-	html{
-		font-size:1rem;
-	}
 	#hotShowing{
-		padding-left:1.0rem;
-		box-sizing:border-box;
 		width: 100%;
-	}
-	.hot-swiper{
-		padding-right: 1rem;
+		padding-bottom:4rem;
+		box-sizing:border-box;
 	}
 	.swiper-container{
 		width: 100%;
-	    height:15rem;
+	    height:10rem;
 	}
 	.swiper-container img{
-		width: 100%;
+		width:100%;
 	}
 	.hot-showing{
 		border-bottom: 1px solid #eee;
+		padding-left:1rem;
 	}
 	.hot-showing:first-of-type .hot-show .hot-info{
 		border-bottom: 1px solid #eee;
@@ -124,16 +109,6 @@
 	.hot-poster{
 		width: 100%;
 		height: 100%;
-	}
-	.play-icon{
-		width: 38px;
-		height: 38px;
-		border:1px solid #fff;
-		background: rgba(0,0,0,.4);
-		border-radius: 50%;
-		position: absolute;
-		left:35%;
-		top:43%;
 	}
 	.play-icon::before{
 		content: "";
